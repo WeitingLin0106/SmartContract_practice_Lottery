@@ -20,6 +20,7 @@ const deploy = async () => {
     .deploy({ data: '0x'+bytecode })
     .send({  gas: '1000000', gasPrice: web3.utils.toWei('2','gwei'), from: accounts[0] });
 
+  console.log(interface);
   console.log('Contract deployed to ', result.options.address);
 };
 deploy();
